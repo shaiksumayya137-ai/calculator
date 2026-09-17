@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>StyleCalc - Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        StyleCalc
+    </div>
+
+    <a href="../Task-1-Portfolio/index.html">
+        ← Back to Portfolio
+    </a>
+
+</header>
+
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="calculator-page">
+
+
+    <div class="calculator-container">
+
+
+        <!-- CALCULATOR -->
+
+        <section class="calculator">
+
+
+            <div class="calculator-title">
+
+                <p>STYLENEST</p>
+
+                <h1>Calculator</h1>
+
+            </div>
+
+
+            <!-- DISPLAY -->
+
+            <div class="display">
+
+                <div
+                    id="previous-display"
+                    class="previous-display">
+                </div>
+
+                <div
+                    id="current-display"
+                    class="current-display">
+                    0
+                </div>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+
+            <div class="buttons">
+
+
+                <button
+                    class="function"
+                    onclick="clearCalculator()">
+
+                    AC
+
+                </button>
+
+
+                <button
+                    class="function"
+                    onclick="deleteNumber()">
+
+                    DEL
+
+                </button>
+
+
+                <button
+                    class="function"
+                    onclick="percentage()">
+
+                    %
+
+                </button>
+
+
+                <button
+                    class="operator"
+                    onclick="chooseOperator('/')">
+
+                    ÷
+
+                </button>
+
+
+                <button
+                    onclick="appendNumber('7')">
+
+                    7
+
+                </button>
+
+
+                <button
+                    onclick="appendNumber('8')">
+
+                    8
+
+                </button>
+
+
+                <button
+                    onclick="appendNumber('9')">
+
+                    9
+
+                </button>
+
+
+                <button
+                    class="operator"
+                    onclick="chooseOperator('*')">
+
+                    ×
+
+                </button>
+
+
+                <button
+                    onclick="appendNumber('4')">
+
+                    4
+
+                </button>
+
+
+                <button
+                    onclick="appendNumber('5')">
+
+                    5
+
+                </button>
+
+
+                <button
+                    onclick="appendNumber('6')">
+
+                    6
+
+                </button>
+
+
+                <button
+                    class="operator"
+                    onclick="chooseOperator('-')">
+
+                    −
+
+                </button>
+
+
+                <button
+                    onclick="appendNumber('1')">
+
+                    1
+
+                </button>
+
+
+                <button
+                    onclick="appendNumber('2')">
+
+                    2
+
+                </button>
+
+
+                <button
+                    onclick="appendNumber('3')">
+
+                    3
+
+                </button>
+
+
+                <button
+                    class="operator"
+                    onclick="chooseOperator('+')">
+
+                    +
+
+                </button>
+
+
+                <button
+                    class="zero"
+                    onclick="appendNumber('0')">
+
+                    0
+
+                </button>
+
+
+                <button
+                    onclick="appendDecimal()">
+
+                    .
+
+                </button>
+
+
+                <button
+                    onclick="toggleSign()">
+
+                    +/−
+
+                </button>
+
+
+                <button
+                    class="equals"
+                    onclick="calculate()">
+
+                    =
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- HISTORY -->
+
+        <section class="history">
+
+            <div class="history-header">
+
+                <h2>
+                    Calculation History
+                </h2>
+
+                <button
+                    onclick="clearHistory()">
+
+                    Clear
+
+                </button>
+
+            </div>
+
+
+            <div id="history-list">
+
+                <p class="empty-history">
+                    No calculations yet.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h2>
+        StyleCalc
+    </h2>
+
+    <p>
+        Simple • Fast • Smart
+    </p>
+
+    <p>
+        © 2026 StyleCalc
+    </p>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

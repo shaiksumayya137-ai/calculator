@@ -1,0 +1,493 @@
+/* ==============================
+   RESET
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #f7f3ec;
+
+    color: #171717;
+
+    min-height: 100vh;
+}
+
+
+/* ==============================
+   NAVBAR
+============================== */
+
+.navbar {
+
+    height: 75px;
+
+    background: #111;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 8%;
+}
+
+
+.logo {
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    color: #f4a261;
+}
+
+
+.navbar a {
+
+    color: white;
+
+    text-decoration: none;
+
+    border: 1px solid #f4a261;
+
+    padding: 9px 15px;
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+
+.navbar a:hover {
+
+    background: #f4a261;
+
+    color: #111;
+}
+
+
+/* ==============================
+   MAIN PAGE
+============================== */
+
+.calculator-page {
+
+    min-height: calc(100vh - 150px);
+
+    padding: 60px 8%;
+}
+
+
+.calculator-container {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 450px 1fr;
+
+    gap: 40px;
+
+    align-items: start;
+}
+
+
+/* ==============================
+   CALCULATOR
+============================== */
+
+.calculator {
+
+    background: #111;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+.calculator-title {
+
+    text-align: center;
+
+    color: white;
+
+    margin-bottom: 20px;
+}
+
+
+.calculator-title p {
+
+    color: #f4a261;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+}
+
+
+.calculator-title h1 {
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    margin-top: 5px;
+}
+
+
+/* ==============================
+   DISPLAY
+============================== */
+
+.display {
+
+    background: #222;
+
+    color: white;
+
+    border-radius: 10px;
+
+    min-height: 110px;
+
+    padding: 15px;
+
+    margin-bottom: 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    text-align: right;
+
+    overflow: hidden;
+}
+
+
+.previous-display {
+
+    color: #999;
+
+    font-size: 16px;
+
+    min-height: 25px;
+}
+
+
+.current-display {
+
+    color: white;
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    word-break: break-all;
+}
+
+
+/* ==============================
+   BUTTON GRID
+============================== */
+
+.buttons {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+
+.buttons button {
+
+    height: 65px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #333;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.buttons button:hover {
+
+    background: #555;
+
+    transform: translateY(-2px);
+}
+
+
+.buttons button:active {
+
+    transform: scale(0.95);
+}
+
+
+/* FUNCTION BUTTONS */
+
+.buttons .function {
+
+    background: #555;
+
+    color: #f4a261;
+}
+
+
+.buttons .function:hover {
+
+    background: #666;
+}
+
+
+/* OPERATORS */
+
+.buttons .operator {
+
+    background: #f4a261;
+
+    color: #111;
+}
+
+
+.buttons .operator:hover {
+
+    background: #ffb77b;
+}
+
+
+/* EQUALS */
+
+.buttons .equals {
+
+    background: #d97732;
+
+    color: white;
+}
+
+
+.buttons .equals:hover {
+
+    background: #ed8c43;
+}
+
+
+/* ZERO */
+
+.buttons .zero {
+
+    grid-column: span 1;
+}
+
+
+/* ==============================
+   HISTORY
+============================== */
+
+.history {
+
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.08);
+
+    min-height: 300px;
+}
+
+
+.history-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+
+.history-header h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+}
+
+
+.history-header button {
+
+    background: #111;
+
+    color: white;
+
+    border: none;
+
+    padding: 8px 14px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+
+.history-header button:hover {
+
+    background: #d97732;
+}
+
+
+/* HISTORY ITEM */
+
+.history-item {
+
+    padding: 13px;
+
+    border-bottom: 1px solid #eee;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+.history-expression {
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+.history-result {
+
+    font-weight: bold;
+
+    color: #d97732;
+}
+
+
+.empty-history {
+
+    color: #888;
+
+    text-align: center;
+
+    padding: 50px 10px;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+
+    background: #111;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+
+footer h2 {
+
+    color: #f4a261;
+
+    margin-bottom: 5px;
+}
+
+
+footer p {
+
+    color: #aaa;
+
+    margin-top: 5px;
+}
+
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 850px) {
+
+    .calculator-container {
+
+        grid-template-columns: 1fr;
+
+        max-width: 500px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .calculator-page {
+
+        padding: 30px 15px;
+    }
+
+
+    .navbar {
+
+        padding: 0 20px;
+    }
+
+
+    .buttons button {
+
+        height: 58px;
+
+        font-size: 18px;
+    }
+
+
+    .current-display {
+
+        font-size: 32px;
+    }
+
+}
